@@ -6,7 +6,7 @@
   }
 
   .Navbar {
-    @apply sticky top-0 w-full lg:w-full flex-wrap justify-between items-center theme lg:h-20 pb-2 shadow-md shadow-gray-300 dark:shadow-gray-800;
+    @apply sticky top-0 w-full lg:w-full flex-wrap justify-between items-center theme lg:h-20 pb-2 shadow-md shadow-gray-300 dark:shadow-stone-800;
   }
 
   .NavLink {
@@ -26,5 +26,9 @@
   }
   .Scroll {
     @apply sticky lg:sticky left-full bottom-0 rounded-lg pr-2 pb-3 lg:pr-3 lg:pb-4;
+  }
+
+  .Hero {
+    @apply pt-3;
   }
 }

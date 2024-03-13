@@ -8,7 +8,7 @@ interface Props {}
 const Navbar: React.FC<Props> = () => {
   return (
     <nav className="flex flex-col lg:flex-row items-center Navbar">
-      <h1 className="flex-initial text-3xl font-bold underline pl-2">
+      <h1 className="flex-initial text-3xl font-bold underline lg:pl-5">
         Axel Cordova
       </h1>
       <div className="flex-initial w-full lg:w-6/12">
