@@ -19,34 +19,33 @@ const App: React.FC<{}> = () => {
 
   return (
     <LanguageContext.Provider value={language}>
-      <div className="w-full">
-        {/* <!-- Navbar --> */}
-        <Navbar />
-
-        {/* <!-- Hero Section --> */}
-        <Hero />
-
-        {/* <!-- More about --> */}
-        <MoreAbout />
-
-        {/* <!-- Skills section --> */}
-        <Skills />
-
-        {/* <!-- Projects section --> */}
-        <Projects />
-
-        {/* <!-- Contact section --> */}
-        <Contact />
-
-        {/* <!-- Social Media accounts --> */}
-        <SocialMedia />
-
-        {/* <!-- Scroll to top --> */}
-        <ScrollToTop />
-
-        {/* <!-- Footer section --> */}
-        <Footer />
-      </div>
+      <Navbar />
+      <main className="w-full flex flex-col items-center">
+        <div className="flex-initial">
+          <Hero />
+        </div>
+        <div className="flex-initial">
+          <MoreAbout />
+        </div>
+        <div className="flex-initial">
+          <Skills />
+        </div>
+        <div className="flex-initial">
+          <Projects />
+        </div>
+        <div className="flex-initial">
+          <Contact />
+        </div>
+        <div className="flex-initial">
+          <SocialMedia />
+        </div>
+        <div className="flex-initial">
+          <ScrollToTop />
+        </div>
+        <div className="flex-initial">
+          <Footer />
+        </div>
+      </main>
     </LanguageContext.Provider>
   );
 };

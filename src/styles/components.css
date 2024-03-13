@@ -6,10 +6,22 @@
   }
 
   .Navbar {
-    @apply sticky top-0 w-full h-24 pb-5 justify-between items-center theme;
+    @apply sticky top-0 w-full lg:w-full flex-wrap justify-between items-center theme lg:h-20 pb-2 shadow-md shadow-gray-300 dark:shadow-gray-800;
+  }
+
+  .NavLink {
+    @apply p-2;
+  }
+
+  .NavLink:hover {
+    @apply dark:bg-white dark:text-gray-900 bg-black text-gray-300 p-2;
   }
 
   .LanguageSwitcher {
     @apply theme;
+  }
+
+  .ThemeSwitcher {
+    @apply px-2 py-2 rounded-md bg-black text-gray-300 dark:bg-white dark:text-gray-900;
   }
 }
