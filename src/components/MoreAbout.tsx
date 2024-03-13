@@ -1,22 +1,20 @@
 import React from "react";
+import { Trans } from "react-i18next";
 
 const MoreAbout: React.FC<{}> = () => {
   return (
     <section className="more-about">
-      <h2>More About Me</h2>
+      <h2>
+        <Trans i18nKey={"moreAbout.title"} />
+      </h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-        nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum,
-        autem deleniti cupiditate molestias quis unde quae totam porro dicta
-        iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus
+        <Trans i18nKey={"moreAbout.p1"} />
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
-        nostrum dolor minus, libero delectus praesentium perferendis
+        <Trans i18nKey={"moreAbout.p2"} />
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
-        consequuntur labore? Ea totam voluptas amet!
+        <Trans i18nKey={"moreAbout.p3"} />
       </p>
     </section>
   );

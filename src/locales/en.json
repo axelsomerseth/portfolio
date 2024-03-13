@@ -1,7 +1,52 @@
 {
   "translation": {
+    "contact": {
+      "title": "Get In Touch With Me",
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "message": "Message",
+      "messagePlaceholder": "Enter your message",
+      "submit": "Submit"
+    },
+    "navbar": {
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
     "hero": {
-      "bioText": "Full Stack Software Engineer | React.js + Node.js + TypeScript | +5 years of experience"
+      "bioTitle": "About me",
+      "bioText": "Hi! I'm a Full Stack Software Engineer. My main tech stack is React.js + Node.js + TypeScript. I have +5 years of experience."
+    },
+    "moreAbout": {
+      "title": "More About Me",
+      "p1": "I have experience working with Golang, Microservices.",
+      "p2": "I also have experience building CI/CD Pipelines and I love them!",
+      "p3": "I work on MacOS because I prefer zsh over Powershell."
+    },
+    "projects": {
+      "header": "Some of my Recent Projects",
+      "link": "Check it Out",
+      "project1": {
+        "title": "Recontent",
+        "details": "Led to build this project from a template and helped to launch the MVP."
+      },
+      "project2": {
+        "title": "Badgr Extras",
+        "details": "Helped to maintain this Chrome extension and solved a few critical bugs."
+      },
+      "project3": {
+        "title": "Resolutions App",
+        "details": "A web app that allows you to remember significant events ion your life."
+      }
+    },
+    "scroll": {
+      "top": "Scroll to top"
+    },
+    "skills": {
+      "header": "My Top Skills"
     }
   }
 }

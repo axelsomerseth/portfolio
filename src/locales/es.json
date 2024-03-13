@@ -1,7 +1,52 @@
 {
   "translation": {
+    "contact": {
+      "title": "Contáctame",
+      "name": "Nombre",
+      "namePlaceholder": "Ingrese su nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "Ingrese su correo electrónico",
+      "message": "Mensaje",
+      "messagePlaceholder": "Escriba un mensaje",
+      "submit": "Enviar"
+    },
+    "navbar": {
+      "about": "Acerca de mí",
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
     "hero": {
-      "bioText": "Ingeniero en Sistemas Full-Stack | React.js + Node.js + TypeScript | +5 años de experiencia"
+      "bioTitle": "Acerca de mí",
+      "bioText": "Hola! Soy Ingeniero en Sistemas Full-Stack. Mis herramientas preferidas son React.js + Node.js + TypeScript. Tengo más de 5 años de experiencia."
+    },
+    "moreAbout": {
+      "title": "Más acerca de mí",
+      "p1": "Tengo experiencia trabajando con Golang, Microservicios.",
+      "p2": "¡También tengo experiencia en la construcción de tuberías de CI/CD y me encantan!",
+      "p3": "Trabajo en MacOS porque prefiero zsh a Powershell."
+    },
+    "projects": {
+      "header": "Algunos de mis Proyectos más Recientes",
+      "link": "Visítalo",
+      "project1": {
+        "title": "Recontent",
+        "details": "Lideré el desarrollo de este proyecto a partir de una plantilla de Remix y contribuí a lanzar el MVP."
+      },
+      "project2": {
+        "title": "Badgr Extras",
+        "details": "Ayudé con el mantenimiento a esta extensión de Chrome y solucioné algunos errores críticos."
+      },
+      "project3": {
+        "title": "Resolutions App",
+        "details": "Una app que te ayuda a recordar los eventos más importantes en tu vida."
+      }
+    },
+    "scroll": {
+      "top": "Ir arriba"
+    },
+    "skills": {
+      "header": "Mis Mejores Habilidades"
     }
   }
 }

@@ -7,7 +7,7 @@ interface LanguageMap {
 const LANGUAGES: LanguageMap = {
   en: { nativeName: "English" },
   es: { nativeName: "Español" },
-  pt: { nativeName: "Português" },
+  // pt: { nativeName: "Português" },
 };
 
 interface Props {

@@ -1,9 +1,12 @@
 import React from "react";
+import { Trans } from "react-i18next";
 
 const Projects: React.FC<{}> = () => {
   return (
     <section className="projects" id="projects">
-      <h2 className="projects-title">Some of my Recent Projects</h2>
+      <h2 className="projects-header">
+        <Trans i18nKey={"projects.header"} />
+      </h2>
       <div className="projects-container">
         <div className="project-container project-card">
           <img
@@ -12,19 +15,19 @@ const Projects: React.FC<{}> = () => {
             loading="lazy"
             className="project-pic"
           />
-          <h3 className="project-title">Expense Tracker</h3>
+          <h3 className="project-title">
+            <Trans i18nKey={"projects.project1.title"} />
+          </h3>
           <p className="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
+            <Trans i18nKey={"projects.project1.details"} />
           </p>
           <a
-            href={"https://resolutions-99ef3.web.app/"}
+            href={"https://app.recontent.io/"}
             target="_blank"
             rel="noreferrer"
             className="project-link"
           >
-            Check it Out
+            <Trans i18nKey={"projects.link"} />
           </a>
         </div>
         <div className="project-container project-card">
@@ -34,19 +37,21 @@ const Projects: React.FC<{}> = () => {
             loading="lazy"
             className="project-pic"
           />
-          <h3 className="project-title">Netflix Clone</h3>
+          <h3 className="project-title">
+            <Trans i18nKey={"projects.project2.title"} />
+          </h3>
           <p className="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
+            <Trans i18nKey={"projects.project2.details"} />
           </p>
           <a
-            href={"https://resolutions-99ef3.web.app/"}
+            href={
+              "https://chromewebstore.google.com/detail/badgr-extras/bmblmoohmflnobgccibkbdfgfgllgdfa"
+            }
             target="_blank"
             rel="noreferrer"
             className="project-link"
           >
-            Check it Out
+            <Trans i18nKey={"projects.link"} />
           </a>
         </div>
         <div className="project-container project-card">
@@ -56,11 +61,11 @@ const Projects: React.FC<{}> = () => {
             loading="lazy"
             className="project-pic"
           />
-          <h3 className="project-title">Greeny Earth</h3>
+          <h3 className="project-title">
+            <Trans i18nKey={"projects.project3.title"} />
+          </h3>
           <p className="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
+            <Trans i18nKey={"projects.project3.details"} />
           </p>
           <a
             href={"https://resolutions-99ef3.web.app/"}
@@ -68,7 +73,7 @@ const Projects: React.FC<{}> = () => {
             rel="noreferrer"
             className="project-link"
           >
-            Check it Out
+            <Trans i18nKey={"projects.link"} />
           </a>
         </div>
       </div>
