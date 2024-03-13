@@ -40,12 +40,10 @@ const App: React.FC<{}> = () => {
           <SocialMedia />
         </div>
         <div className="flex-initial">
-          <ScrollToTop />
-        </div>
-        <div className="flex-initial">
           <Footer />
         </div>
       </main>
+      <ScrollToTop />
     </LanguageContext.Provider>
   );
 };

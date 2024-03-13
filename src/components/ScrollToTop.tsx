@@ -1,11 +1,11 @@
 import React from "react";
-import { Trans } from "react-i18next";
+import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
 
 const ScrollToTop: React.FC<{}> = () => {
   return (
-    <div>
-      <Trans i18nKey={"scroll.top"} />
-    </div>
+    <button className="Scroll">
+      <ArrowUpCircleIcon className="h-10" />
+    </button>
   );
 };
 

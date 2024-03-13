@@ -21,10 +21,7 @@ const ThemeSwitcher: React.FC<{}> = () => {
   };
 
   return (
-    <button
-      onClick={toggleDarkMode}
-      className="px-2 py-2 rounded-md bg-black text-gray-300 dark:bg-white dark:text-gray-900"
-    >
+    <button onClick={toggleDarkMode} className="ThemeSwitcher">
       {darkMode ? (
         <SunIcon className="h-3 lg:h-5" />
       ) : (
