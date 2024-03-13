@@ -1,7 +1,52 @@
 {
   "translation": {
+    "contact": {
+      "title": "Contáctame",
+      "name": "Nombre",
+      "namePlaceholder": "Ingrese su nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "Ingrese su correo electrónico",
+      "message": "Mensaje",
+      "messagePlaceholder": "Escriba un mensaje",
+      "submit": "Enviar"
+    },
+    "navbar": {
+      "about": "Acerca de mí",
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
     "hero": {
+      "bioTitle": "Acerca de mí",
       "bioText": "Ingeniero en Sistemas Full-Stack | React.js + Node.js + TypeScript | +5 años de experiencia"
+    },
+    "moreAbout": {
+      "title": "Más acerca de mí",
+      "p1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum, autem deleniti cupiditate molestias quis unde quae totam porro dicta iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus",
+      "p2": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur nostrum dolor minus, libero delectus praesentium perferendis",
+      "p3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consequuntur labore? Ea totam voluptas amet!"
+    },
+    "projects": {
+      "header": "Algunos de mis Proyectos más Recientes",
+      "link": "Visítalo",
+      "project1": {
+        "title": "Expense Tracker",
+        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!"
+      },
+      "project2": {
+        "title": "Netflix Clone",
+        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!"
+      },
+      "project3": {
+        "title": "Greeny Earth",
+        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!"
+      }
+    },
+    "scroll": {
+      "top": "Ir arriba"
+    },
+    "skills": {
+      "header": "Mis Mejores Habilidades"
     }
   }
 }

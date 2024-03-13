@@ -1,9 +1,12 @@
 import React from "react";
+import { Trans } from "react-i18next";
 
 const Skills: React.FC<{}> = () => {
   return (
     <section className="skills" id="skills">
-      <h2 className="skill-header">My Top Skills</h2>
+      <h2 className="skill-header">
+        <Trans i18nKey={"skills.header"} />
+      </h2>
 
       <div className="skills-wrapper">
         <div className="first-set animate__animated animate__pulse">

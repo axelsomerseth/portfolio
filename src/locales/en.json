@@ -1,7 +1,52 @@
 {
   "translation": {
+    "contact": {
+      "title": "Get In Touch With Me",
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "message": "Message",
+      "messagePlaceholder": "Enter your message",
+      "submit": "Submit"
+    },
+    "navbar": {
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
     "hero": {
+      "bioTitle": "About me",
       "bioText": "Full Stack Software Engineer | React.js + Node.js + TypeScript | +5 years of experience"
+    },
+    "moreAbout": {
+      "title": "More About Me",
+      "p1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum, autem deleniti cupiditate molestias quis unde quae totam porro dicta iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus",
+      "p2": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur nostrum dolor minus, libero delectus praesentium perferendis",
+      "p3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consequuntur labore? Ea totam voluptas amet!"
+    },
+    "projects": {
+      "header": "Some of my Recent Projects",
+      "link": "Check it Out",
+      "project1": {
+        "title": "Expense Tracker",
+        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!"
+      },
+      "project2": {
+        "title": "Netflix Clone",
+        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!"
+      },
+      "project3": {
+        "title": "Greeny Earth",
+        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!"
+      }
+    },
+    "scroll": {
+      "top": "Scroll to top"
+    },
+    "skills": {
+      "header": "My Top Skills"
     }
   }
 }
