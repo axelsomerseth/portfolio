@@ -18,28 +18,28 @@
     },
     "hero": {
       "bioTitle": "About me",
-      "bioText": "Full Stack Software Engineer | React.js + Node.js + TypeScript | +5 years of experience"
+      "bioText": "Hi! I'm a Full Stack Software Engineer. My main tech stack is React.js + Node.js + TypeScript. I have +5 years of experience."
     },
     "moreAbout": {
       "title": "More About Me",
-      "p1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum, autem deleniti cupiditate molestias quis unde quae totam porro dicta iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus",
-      "p2": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur nostrum dolor minus, libero delectus praesentium perferendis",
-      "p3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consequuntur labore? Ea totam voluptas amet!"
+      "p1": "I have experience working with Golang, Microservices.",
+      "p2": "I also have experience building CI/CD Pipelines and I love them!",
+      "p3": "I work on MacOS because I prefer zsh over Powershell."
     },
     "projects": {
       "header": "Some of my Recent Projects",
       "link": "Check it Out",
       "project1": {
-        "title": "Expense Tracker",
-        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!"
+        "title": "Recontent",
+        "details": "Led to build this project from a template and helped to launch the MVP."
       },
       "project2": {
-        "title": "Netflix Clone",
-        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!"
+        "title": "Badgr Extras",
+        "details": "Helped to maintain this Chrome extension and solved a few critical bugs."
       },
       "project3": {
-        "title": "Greeny Earth",
-        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!"
+        "title": "Resolutions App",
+        "details": "A web app that allows you to remember significant events ion your life."
       }
     },
     "scroll": {

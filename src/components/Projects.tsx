@@ -22,7 +22,7 @@ const Projects: React.FC<{}> = () => {
             <Trans i18nKey={"projects.project1.details"} />
           </p>
           <a
-            href={"https://resolutions-99ef3.web.app/"}
+            href={"https://app.recontent.io/"}
             target="_blank"
             rel="noreferrer"
             className="project-link"
@@ -44,7 +44,9 @@ const Projects: React.FC<{}> = () => {
             <Trans i18nKey={"projects.project2.details"} />
           </p>
           <a
-            href={"https://resolutions-99ef3.web.app/"}
+            href={
+              "https://chromewebstore.google.com/detail/badgr-extras/bmblmoohmflnobgccibkbdfgfgllgdfa"
+            }
             target="_blank"
             rel="noreferrer"
             className="project-link"
