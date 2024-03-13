@@ -1,25 +1,19 @@
 import React from "react";
+import WorkingFromAnywhere from "../assets/illustrations/working_from_anywhere.svg";
+import { Trans } from "react-i18next";
 
-function Hero() {
+const Hero: React.FC<{}> = () => {
   return (
     <section className="hero" id="about">
-      <img
-        src="assets/images/wfh_1.svg"
-        alt="jane-doe"
-        loading="lazy"
-        className="hero-img"
-      />
+      <img src={WorkingFromAnywhere} alt="" />
       <div className="bio animate__animated animate__shakeX">
         <h2 className="bio-title">About Me</h2>
         <p className="bio-text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
-          dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
-          inventore tempore minus nemo, iste ullam illo laboriosam maiores
-          repudiandae quos!
+          <Trans i18nKey={"hero.bioText"}></Trans>
         </p>
       </div>
     </section>
   );
-}
+};
 
 export default Hero;

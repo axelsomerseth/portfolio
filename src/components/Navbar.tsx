@@ -1,7 +1,7 @@
 import React from "react";
 import { UserCircleIcon } from "@heroicons/react/24/solid";
 
-function Navbar() {
+const Navbar: React.FC<{}> = () => {
   return (
     <nav>
       <h1 className="text-3xl font-bold underline">
@@ -35,6 +35,6 @@ function Navbar() {
       </button>
     </nav>
   );
-}
+};
 
 export default Navbar;
