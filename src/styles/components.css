@@ -1,0 +1,15 @@
+@tailwind components;
+
+@layer components {
+  .theme {
+    @apply bg-white text-gray-900 dark:bg-black dark:text-gray-300;
+  }
+
+  .Navbar {
+    @apply sticky top-0 w-full h-24 pb-5 justify-between items-center theme;
+  }
+
+  .LanguageSwitcher {
+    @apply theme;
+  }
+}

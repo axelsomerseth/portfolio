@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 interface LanguageMap {
   [key: string]: { nativeName: string };
@@ -10,14 +11,13 @@ const LANGUAGES: LanguageMap = {
   // pt: { nativeName: "Português" },
 };
 
-interface Props {
-  currentLanguage: string;
-  handleLanguage: (language: string) => void;
-}
+interface Props {}
 
-const LanguageSwitcher: React.FC<Props> = ({ handleLanguage }) => {
-  const onLanguageChange = (value: string) => {
-    handleLanguage(value);
+const LanguageSwitcher: React.FC<Props> = () => {
+  const { i18n } = useTranslation();
+
+  const onLanguageChange = async (value: string) => {
+    await i18n.changeLanguage(value);
   };
 
   return (
@@ -25,12 +25,16 @@ const LanguageSwitcher: React.FC<Props> = ({ handleLanguage }) => {
       name="language"
       id="language"
       onChange={(e) => onLanguageChange(e.target.value)}
+      defaultValue={i18n.resolvedLanguage || "en"}
+      className="LanguageSwitcher"
     >
-      {Object.keys(LANGUAGES).map((language) => (
-        <option value={language} key={language}>
-          {LANGUAGES[language].nativeName}
-        </option>
-      ))}
+      {Object.keys(LANGUAGES).map((language) => {
+        return (
+          <option value={language} key={language}>
+            {LANGUAGES[language].nativeName}
+          </option>
+        );
+      })}
     </select>
   );
 };

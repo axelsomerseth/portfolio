@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import Navbar from "./components/Navbar";
@@ -10,51 +10,44 @@ import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
-import LanguageSwitcher from "./components/LanguageSwitcher";
+
+export const LanguageContext = createContext("en");
 
 const App: React.FC<{}> = () => {
   const { i18n } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
-
-  const handleLanguage = (newLanguage: string) => {
-    i18n.changeLanguage(newLanguage);
-    setCurrentLanguage(newLanguage);
-  };
+  const [language] = useState(i18n.resolvedLanguage || "en");
 
   return (
-    <>
-      <LanguageSwitcher
-        currentLanguage={currentLanguage}
-        handleLanguage={handleLanguage}
-      />
+    <LanguageContext.Provider value={language}>
+      <div className="w-full">
+        {/* <!-- Navbar --> */}
+        <Navbar />
 
-      {/* <!-- Navbar --> */}
-      <Navbar />
+        {/* <!-- Hero Section --> */}
+        <Hero />
 
-      {/* <!-- Hero Section --> */}
-      <Hero />
+        {/* <!-- More about --> */}
+        <MoreAbout />
 
-      {/* <!-- More about --> */}
-      <MoreAbout />
+        {/* <!-- Skills section --> */}
+        <Skills />
 
-      {/* <!-- Skills section --> */}
-      <Skills />
+        {/* <!-- Projects section --> */}
+        <Projects />
 
-      {/* <!-- Projects section --> */}
-      <Projects />
+        {/* <!-- Contact section --> */}
+        <Contact />
 
-      {/* <!-- Contact section --> */}
-      <Contact />
+        {/* <!-- Social Media accounts --> */}
+        <SocialMedia />
 
-      {/* <!-- Social Media accounts --> */}
-      <SocialMedia />
+        {/* <!-- Scroll to top --> */}
+        <ScrollToTop />
 
-      {/* <!-- Scroll to top --> */}
-      <ScrollToTop />
-
-      {/* <!-- Footer section --> */}
-      <Footer />
-    </>
+        {/* <!-- Footer section --> */}
+        <Footer />
+      </div>
+    </LanguageContext.Provider>
   );
 };
 

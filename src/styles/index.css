@@ -1,0 +1,13 @@
+@import "components.css";
+
+@tailwind base;
+
+@tailwind utilities;
+
+body {
+  @apply w-full theme;
+}
+
+.theme {
+  @apply bg-white text-gray-900 dark:bg-black dark:text-gray-300;
+}
