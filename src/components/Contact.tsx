@@ -1,6 +1,6 @@
 import React from "react";
 
-function Contact() {
+const Contact: React.FC<{}> = () => {
   return (
     <section className="contact" id="contact">
       <h2>Get In Touch With Me</h2>
@@ -52,6 +52,6 @@ function Contact() {
       </div>
     </section>
   );
-}
+};
 
 export default Contact;

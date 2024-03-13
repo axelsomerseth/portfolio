@@ -1,6 +1,6 @@
 import React from "react";
 
-function Projects() {
+const Projects: React.FC<{}> = () => {
   return (
     <section className="projects" id="projects">
       <h2 className="projects-title">Some of my Recent Projects</h2>
@@ -18,7 +18,12 @@ function Projects() {
             ratione vel inventore labore commodi modi quos culpa aut saepe!
             Alias!
           </p>
-          <a href="#" target="_blank" className="project-link">
+          <a
+            href={"https://resolutions-99ef3.web.app/"}
+            target="_blank"
+            rel="noreferrer"
+            className="project-link"
+          >
             Check it Out
           </a>
         </div>
@@ -35,7 +40,12 @@ function Projects() {
             ratione vel inventore labore commodi modi quos culpa aut saepe!
             Alias!
           </p>
-          <a href="#" target="_blank" className="project-link">
+          <a
+            href={"https://resolutions-99ef3.web.app/"}
+            target="_blank"
+            rel="noreferrer"
+            className="project-link"
+          >
             Check it Out
           </a>
         </div>
@@ -52,13 +62,18 @@ function Projects() {
             ratione vel inventore labore commodi modi quos culpa aut saepe!
             Alias!
           </p>
-          <a href="#" target="_blank" className="project-link">
+          <a
+            href={"https://resolutions-99ef3.web.app/"}
+            target="_blank"
+            rel="noreferrer"
+            className="project-link"
+          >
             Check it Out
           </a>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Projects;
