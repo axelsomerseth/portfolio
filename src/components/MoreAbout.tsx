@@ -1,6 +1,6 @@
 import React from "react";
 
-function MoreAbout() {
+const MoreAbout: React.FC<{}> = () => {
   return (
     <section className="more-about">
       <h2>More About Me</h2>
@@ -20,6 +20,6 @@ function MoreAbout() {
       </p>
     </section>
   );
-}
+};
 
 export default MoreAbout;

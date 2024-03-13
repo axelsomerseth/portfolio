@@ -1,6 +1,6 @@
 import React from "react";
 
-function Skills() {
+const Skills: React.FC<{}> = () => {
   return (
     <section className="skills" id="skills">
       <h2 className="skill-header">My Top Skills</h2>
@@ -50,6 +50,6 @@ function Skills() {
       </div>
     </section>
   );
-}
+};
 
 export default Skills;

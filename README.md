@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Illustrations were downloaded from [unDraw](https://undraw.co/search).
+Internationalization library: [React i18next](https://react.i18next.com/).
 
 ## Available Scripts
 
