@@ -20,14 +20,14 @@ const App: React.FC<{}> = () => {
   return (
     <LanguageContext.Provider value={language}>
       <Navbar />
-      <main className="w-full flex flex-col items-center">
+      <main className="w-full flex flex-col items-center p-1">
         <div className="flex-initial">
           <Hero />
         </div>
         <div className="flex-initial">
           <MoreAbout />
         </div>
-        <div className="flex-initial">
+        <div className="flex-initial lg:w-full">
           <Skills />
         </div>
         <div className="flex-initial">
@@ -36,10 +36,10 @@ const App: React.FC<{}> = () => {
         <div className="flex-initial">
           <Contact />
         </div>
-        <div className="flex-initial">
+        <div className="flex-initial lg:w-5/6">
           <SocialMedia />
         </div>
-        <div className="flex-initial">
+        <div className="flex-initial w-full">
           <Footer />
         </div>
       </main>
