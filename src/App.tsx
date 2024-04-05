@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import Navbar from "./components/Navbar";
@@ -10,51 +10,41 @@ import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
-import LanguageSwitcher from "./components/LanguageSwitcher";
+
+export const LanguageContext = createContext("en");
 
 const App: React.FC<{}> = () => {
   const { i18n } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
-
-  const handleLanguage = (newLanguage: string) => {
-    i18n.changeLanguage(newLanguage);
-    setCurrentLanguage(newLanguage);
-  };
+  const [language] = useState(i18n.resolvedLanguage || "en");
 
   return (
-    <>
-      <LanguageSwitcher
-        currentLanguage={currentLanguage}
-        handleLanguage={handleLanguage}
-      />
-
-      {/* <!-- Navbar --> */}
+    <LanguageContext.Provider value={language}>
       <Navbar />
-
-      {/* <!-- Hero Section --> */}
-      <Hero />
-
-      {/* <!-- More about --> */}
-      <MoreAbout />
-
-      {/* <!-- Skills section --> */}
-      <Skills />
-
-      {/* <!-- Projects section --> */}
-      <Projects />
-
-      {/* <!-- Contact section --> */}
-      <Contact />
-
-      {/* <!-- Social Media accounts --> */}
-      <SocialMedia />
-
-      {/* <!-- Scroll to top --> */}
+      <main className="w-full flex flex-col items-center p-1">
+        <div className="flex-initial">
+          <Hero />
+        </div>
+        <div className="flex-initial">
+          <MoreAbout />
+        </div>
+        <div className="flex-initial lg:w-full">
+          <Skills />
+        </div>
+        <div className="flex-initial">
+          <Projects />
+        </div>
+        <div className="flex-initial">
+          <Contact />
+        </div>
+        <div className="flex-initial lg:w-5/6">
+          <SocialMedia />
+        </div>
+        <div className="flex-initial w-full">
+          <Footer />
+        </div>
+      </main>
       <ScrollToTop />
-
-      {/* <!-- Footer section --> */}
-      <Footer />
-    </>
+    </LanguageContext.Provider>
   );
 };
 

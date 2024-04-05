@@ -18,7 +18,7 @@
     },
     "hero": {
       "bioTitle": "About me",
-      "bioText": "Hi! I'm a Full Stack Software Engineer. My main tech stack is React.js + Node.js + TypeScript. I have +5 years of experience."
+      "bioText": "Hi! I'm a Full Stack Software Engineer. My main tech stack is React.js + Node.js + TypeScript. I have +5 years of experience. I love solving problems and satisfying needs through software development."
     },
     "moreAbout": {
       "title": "More About Me",
@@ -28,7 +28,7 @@
     },
     "projects": {
       "header": "Some of my Recent Projects",
-      "link": "Check it Out",
+      "link": "Check it out",
       "project1": {
         "title": "Recontent",
         "details": "Led to build this project from a template and helped to launch the MVP."
@@ -47,6 +47,9 @@
     },
     "skills": {
       "header": "My Top Skills"
+    },
+    "socialMedia": {
+      "header": "My Social Media Profiles"
     }
   }
 }

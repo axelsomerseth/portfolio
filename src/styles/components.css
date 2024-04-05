@@ -1,0 +1,85 @@
+@tailwind components;
+
+@layer components {
+  .theme {
+    @apply bg-white text-gray-900 dark:bg-black dark:text-gray-300;
+  }
+
+  .Navbar {
+    @apply sticky top-0 w-full lg:w-full flex-wrap justify-between items-center theme lg:h-20 pb-2 shadow-md shadow-gray-400 dark:shadow-stone-800;
+  }
+
+  .NavLink {
+    @apply p-2;
+  }
+
+  .NavLink:hover {
+    @apply dark:bg-white dark:text-gray-900 bg-black text-gray-300 p-2;
+  }
+
+  .LanguageSwitcher {
+    @apply theme;
+  }
+
+  .ThemeSwitcher {
+    @apply px-2 py-2 rounded-md bg-black text-gray-100 dark:bg-white dark:text-gray-900;
+  }
+  .Scroll {
+    @apply sticky lg:sticky left-full bottom-0 rounded-lg pr-2 pb-3 lg:pr-3 lg:pb-4;
+  }
+
+  .Hero {
+    @apply flex lg:flex-row flex-col pt-3 pb-3 mb-4;
+  }
+
+  .MoreAbout {
+    @apply flex flex-col pt-3 mb-4;
+  }
+
+  .Skills {
+    @apply flex flex-col pt-3 mb-4;
+  }
+
+  .IconCard {
+    @apply p-5 m-5 w-auto h-auto lg:w-1/6 rounded-lg shadow-lg shadow-gray-400 dark:shadow-stone-800 flex justify-center items-center border border-gray-700 dark:border-gray-600;
+  }
+
+  .SocialMedia {
+    @apply flex flex-col pt-3 mb-4;
+  }
+
+  .Projects {
+    @apply flex flex-col pt-3 mb-4;
+  }
+  .ProjectCard {
+    @apply p-5 m-5 w-auto h-auto lg:w-1/3 rounded-lg shadow-lg shadow-gray-400 dark:shadow-stone-800 border border-gray-700 dark:border-gray-600;
+  }
+  .project-img {
+    @apply w-full;
+  }
+  .project-title {
+    @apply text-center text-xl font-semibold;
+  }
+  .project-details {
+    @apply text-center;
+  }
+  .project-link {
+    @apply text-center text-blue-600 flex justify-center underline;
+  }
+
+  .Contact {
+    @apply flex flex-col pt-3 pb-4 mb-4;
+  }
+  .form-control {
+    @apply flex-initial p-2;
+  }
+  .input-field {
+    @apply w-full rounded-md border border-gray-700 p-2 text-black dark:text-white dark:bg-black;
+  }
+  .submit-button-container {
+    @apply bg-blue-600 text-white pt-2 pb-2 pl-4 pr-4 rounded-xl border border-indigo-800 shadow-md shadow-indigo-800;
+  }
+  .submit-button-container:hover {
+    @apply bg-blue-900 text-white;
+  }
+}

@@ -1,0 +1,17 @@
+@import "components.css";
+
+@tailwind base;
+
+@tailwind utilities;
+
+body {
+  @apply w-full theme;
+}
+
+.theme {
+  @apply bg-white text-gray-900 dark:bg-black dark:text-gray-300;
+}
+
+.section-header {
+  @apply text-2xl lg:text-3xl pb-3 text-center dark:text-white font-semibold;
+}

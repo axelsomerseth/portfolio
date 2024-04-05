@@ -1,54 +1,41 @@
 import React from "react";
 import { Trans } from "react-i18next";
+import reactLogo from "./../assets/icons/react-logo.png";
+import nodeLogo from "./../assets/icons/node-logo.png";
+import typescriptLogo from "./../assets/icons/typescript-logo.png";
+import awsLogo from "./../assets/icons/aws-logo.png";
+import gitLogo from "./../assets/icons/git-logo.png";
+import postgresqlLogo from "./../assets/icons/postgresql-logo.png";
 
 const Skills: React.FC<{}> = () => {
   return (
-    <section className="skills" id="skills">
-      <h2 className="skill-header">
+    <section className="Skills">
+      <h2 className="section-header">
         <Trans i18nKey={"skills.header"} />
       </h2>
 
-      <div className="skills-wrapper">
-        <div className="first-set animate__animated animate__pulse">
-          <img
-            src="assets/icons/icons8-html-5.svg"
-            alt=""
-            loading="lazy"
-            className="icon icon-card"
-          />
-          <img
-            src="assets/icons/icons8-css3.svg"
-            alt=""
-            loading="lazy"
-            className="icon icon-card"
-          />
-          <img
-            src="assets/icons/icons8-javascript.svg"
-            alt=""
-            loading="lazy"
-            className="icon icon-card"
-          />
+      {/* TODO: extract skill into a separate component */}
+      <div className="flex lg:flex-row justify-around">
+        <div className="flex-initial IconCard">
+          <img src={reactLogo} alt="react logo" loading="lazy" />
         </div>
+        <div className="flex-initial IconCard">
+          <img src={nodeLogo} alt="node logo" loading="lazy" />
+        </div>
+        <div className="flex-initial IconCard">
+          <img src={typescriptLogo} alt="typescript logo" loading="lazy" />
+        </div>
+      </div>
 
-        <div className="second-set animate__animated animate__pulse">
-          <img
-            src="assets/icons/icons8-bootstrap.svg"
-            alt=""
-            loading="lazy"
-            className="icon icon-card"
-          />
-          <img
-            src="assets/icons/icons8-react-native.svg"
-            alt=""
-            loading="lazy"
-            className="icon icon-card"
-          />
-          <img
-            src="assets/icons/icons8-git.svg"
-            alt=""
-            loading="lazy"
-            className="icon icon-card"
-          />
+      <div className="flex lg:flex-row justify-around">
+        <div className="flex-initial IconCard">
+          <img src={gitLogo} alt="git logo" loading="lazy" />
+        </div>
+        <div className="flex-initial IconCard">
+          <img src={awsLogo} alt="aws logo" loading="lazy" />
+        </div>
+        <div className="flex-initial IconCard">
+          <img src={postgresqlLogo} alt="postgresql logo" loading="lazy" />
         </div>
       </div>
     </section>
