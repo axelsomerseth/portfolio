@@ -55,6 +55,7 @@ jobs:
 
   test:
     name: 🧪 Test
+    needs: [lint, typecheck]
     runs-on: ubuntu-latest
     steps:
       - name: 🚫 Cancel Workflow Action
@@ -83,6 +84,7 @@ jobs:
 
   build:
     name: 📦 Build
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - name: 🚫 Cancel Workflow Action
@@ -111,6 +113,7 @@ jobs:
 
   deploy:
     name: 🚢 Deploy to Production
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: 🚫 Cancel Workflow Action
