@@ -6,8 +6,6 @@ import ThemeSwitcher from "./ThemeSwitcher";
 interface Props {}
 
 const Navbar: React.FC<Props> = () => {
-  // TODO: add navigation to other sections
-
   return (
     <nav className="flex flex-col lg:flex-row items-center Navbar">
       <h1 className="flex-initial text-3xl font-bold lg:pl-5">Axel Cordova</h1>
