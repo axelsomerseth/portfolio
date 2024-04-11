@@ -1,11 +1,34 @@
 import React from "react";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import recontentScreenshot from "./../assets/screenshots/recontent.png";
 import badgrExtrasScreenshot from "./../assets/screenshots/badgr-extras.png";
 import resolutionsScreenshot from "./../assets/screenshots/resolutions.png";
-import { LinkIcon } from "@heroicons/react/24/solid";
+import ProjectCard from "./ProjectCard";
 
 const Projects: React.FC<{}> = () => {
+  const { t } = useTranslation();
+
+  const PROJECTS = [
+    {
+      title: t("projects.project1.title"),
+      details: t("projects.project1.details"),
+      screenshot: recontentScreenshot,
+      link: "https://app.recontent.io/",
+    },
+    {
+      title: t("projects.project2.title"),
+      details: t("projects.project2.details"),
+      screenshot: badgrExtrasScreenshot,
+      link: "https://badgr-extras.netlify.app/",
+    },
+    {
+      title: t("projects.project3.title"),
+      details: t("projects.project3.details"),
+      screenshot: resolutionsScreenshot,
+      link: "https://resolutions-app.netlify.app/",
+    },
+  ];
+
   return (
     <section className="Projects">
       <h2 className="section-header">
@@ -13,83 +36,16 @@ const Projects: React.FC<{}> = () => {
       </h2>
 
       <div className="flex flex-col lg:flex-row">
-        {/* TODO: extract ProjectCard into a separate component */}
-        <div className="flex-initial ProjectCard">
-          <img
-            src={recontentScreenshot}
-            alt="recontent screenshot"
-            loading="lazy"
-            className="project-img"
+        {PROJECTS.map((project) => (
+          <ProjectCard
+            className="flex-initial"
+            key={project.title}
+            title={project.title}
+            details={project.details}
+            screenshot={project.screenshot}
+            link={project.link}
           />
-          <h3 className="project-title">
-            <Trans i18nKey={"projects.project1.title"} />
-          </h3>
-          <p className="project-details">
-            <Trans i18nKey={"projects.project1.details"} />
-          </p>
-          <a
-            href={"https://app.recontent.io/"}
-            target="_blank"
-            rel="noreferrer"
-            className="project-link"
-          >
-            <LinkIcon className="h-5" />
-            &nbsp;
-            <Trans i18nKey={"projects.link"} />
-          </a>
-        </div>
-
-        <div className="flex-initial ProjectCard">
-          <img
-            src={badgrExtrasScreenshot}
-            alt="badgr extras screenshot"
-            loading="lazy"
-            className="project-pic"
-          />
-          <h3 className="project-title">
-            <Trans i18nKey={"projects.project2.title"} />
-          </h3>
-          <p className="project-details">
-            <Trans i18nKey={"projects.project2.details"} />
-          </p>
-          <a
-            href={
-              "https://chromewebstore.google.com/detail/badgr-extras/bmblmoohmflnobgccibkbdfgfgllgdfa"
-            }
-            target="_blank"
-            rel="noreferrer"
-            className="project-link"
-          >
-            <LinkIcon className="h-5" />
-            &nbsp;
-            <Trans i18nKey={"projects.link"} />
-          </a>
-        </div>
-
-        <div className="flex-initial ProjectCard">
-          <img
-            src={resolutionsScreenshot}
-            alt="resolution screenshot"
-            loading="lazy"
-            className="project-pic"
-          />
-          <h3 className="project-title">
-            <Trans i18nKey={"projects.project3.title"} />
-          </h3>
-          <p className="project-details">
-            <Trans i18nKey={"projects.project3.details"} />
-          </p>
-          <a
-            href={"https://resolutions-99ef3.web.app/"}
-            target="_blank"
-            rel="noreferrer"
-            className="project-link"
-          >
-            <LinkIcon className="h-5" />
-            &nbsp;
-            <Trans i18nKey={"projects.link"} />
-          </a>
-        </div>
+        ))}
       </div>
     </section>
   );
