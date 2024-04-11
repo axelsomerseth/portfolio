@@ -30,7 +30,7 @@ const Projects: React.FC<{}> = () => {
   ];
 
   return (
-    <section className="Projects">
+    <section className="Projects" id="projects">
       <h2 className="section-header">
         <Trans i18nKey={"projects.header"} />
       </h2>

@@ -16,7 +16,7 @@ const Contact: React.FC<{}> = () => {
   };
 
   return (
-    <section className="Contact">
+    <section className="Contact" id="contact">
       <h2 className="section-header">
         <Trans i18nKey={"contact.title"} />
       </h2>

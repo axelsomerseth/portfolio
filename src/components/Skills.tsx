@@ -9,7 +9,7 @@ import postgresqlLogo from "./../assets/icons/postgresql-logo.png";
 
 const Skills: React.FC<{}> = () => {
   return (
-    <section className="Skills">
+    <section className="Skills" id="skills">
       <h2 className="section-header">
         <Trans i18nKey={"skills.header"} />
       </h2>
