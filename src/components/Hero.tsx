@@ -14,6 +14,7 @@ const Hero: React.FC<{}> = () => {
         <img src={WorkingFromAnywhere} alt="" className="w-full lg:w-10/12" />
       </div>
       <div className="flex-initial lg:w-5/12">
+        {/* TODO: fix the responsiveness of the about me subsection */}
         <div className="flex w-full h-full justify-center items-center">
           <div className="flex-initial w-full h-full lg:w-3/5 lg:h-2/5 p-5 rounded-lg border border-gray-500 shadow-lg shadow-slate-500">
             <div className="text-center">

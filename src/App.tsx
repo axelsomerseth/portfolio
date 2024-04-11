@@ -20,7 +20,7 @@ const App: React.FC<{}> = () => {
   return (
     <LanguageContext.Provider value={language}>
       <Navbar />
-      <main className="w-full flex flex-col items-center p-1">
+      <main className="w-full flex flex-col items-center lg:pl-16 lg:pr-16 pl-2 pr-2">
         <div className="flex-initial">
           <Hero />
         </div>

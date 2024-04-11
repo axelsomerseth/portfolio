@@ -4,7 +4,7 @@ const Footer: React.FC<{}> = () => {
   return (
     <footer className="flex flex-row justify-center items-center w-full">
       <div className="flex-initial">
-        <span>Made with ❤️ by Axel Cordova.</span>
+        <span>Made with ❤️ from scratch by Axel Cordova.</span>
       </div>
     </footer>
   );
