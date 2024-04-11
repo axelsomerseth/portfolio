@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { contactMe } from "../services/contact";
 
 const Contact: React.FC<{}> = () => {
   const { t } = useTranslation();
 
-  // TODO: implement controlled inputs in this component
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const success = await contactMe(name, email, message);
+    console.log("Success: ", success);
+  };
 
   return (
     <section className="Contact">
@@ -13,7 +22,7 @@ const Contact: React.FC<{}> = () => {
       </h2>
 
       <div className="flex flex-col">
-        <form action="https://eov9tq5whnye23b.m.pipedream.net" method="POST">
+        <form onSubmit={onSubmit}>
           <div className="form-control">
             <div className="flex flex-row items-center">
               <div className="flex-initial w-1/6">
@@ -30,6 +39,8 @@ const Contact: React.FC<{}> = () => {
                   placeholder={t("contact.namePlaceholder")}
                   className="input-field"
                   required
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
                 />
               </div>
             </div>
@@ -50,6 +61,8 @@ const Contact: React.FC<{}> = () => {
                   placeholder={t("contact.emailPlaceholder")}
                   className="input-field"
                   required
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
                 />
               </div>
             </div>
@@ -71,6 +84,8 @@ const Contact: React.FC<{}> = () => {
                   name="message"
                   className="input-field"
                   required
+                  value={message}
+                  onChange={(event) => setMessage(event.target.value)}
                 ></textarea>
               </div>
             </div>
