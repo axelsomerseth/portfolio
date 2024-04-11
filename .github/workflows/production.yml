@@ -1,0 +1,147 @@
+name: 🚢 Production Pipeline
+run-name: 🚢 Production Pipeline
+on:
+  push:
+    branches:
+      - main
+
+env:
+  AWS_S3_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET_NAME }}
+
+jobs:
+  lint:
+    name: 🪄 Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚫 Cancel Workflow Action
+        uses: styfle/cancel-workflow-action@0.12.1
+
+      - name: ⬇️ Check out repository code
+        uses: actions/checkout@v4.1.1
+
+      - name: 🟩 Set up Node
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: "16"
+          cache: "npm"
+
+      - name: 📥 Download dependencies
+        run: npm ci
+
+      - name: 🔬 Lint source code
+        run: npm run lint
+
+  typecheck:
+    name: 🪄 Typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚫 Cancel Workflow Action
+        uses: styfle/cancel-workflow-action@0.12.1
+
+      - name: ⬇️ Check out repository code
+        uses: actions/checkout@v4.1.1
+
+      - name: 🟩 Set up Node
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: "16"
+          cache: "npm"
+
+      - name: 📥 Download dependencies
+        run: npm ci
+
+      - name: ✅ Typecheck
+        run: npm run typecheck
+
+  test:
+    name: 🧪 Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚫 Cancel Workflow Action
+        uses: styfle/cancel-workflow-action@0.12.1
+
+      - name: ⬇️ Check out repository code
+        uses: actions/checkout@v4.1.1
+
+      - name: 🟩 Set up Node
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: "16"
+          cache: "npm"
+
+      - name: 📥 Download dependencies
+        run: npm ci
+
+      - name: 🧪 Run tests
+        run: npm test -- --coverage
+
+      - name: 📊 Upload test coverage folder as an artifact
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: coverage
+          path: ./coverage
+
+  build:
+    name: 📦 Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚫 Cancel Workflow Action
+        uses: styfle/cancel-workflow-action@0.12.1
+
+      - name: ⬇️ Check out repository code
+        uses: actions/checkout@v4.1.1
+
+      - name: 🟩 Set up Node
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: "16"
+          cache: "npm"
+
+      - name: 📥 Download dependencies
+        run: npm ci
+
+      - name: 🏗️ Build App
+        run: npm run build
+
+      - name: ⬆️ Upload production build as an artifact
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: build
+          path: ./build
+
+  deploy:
+    name: 🚢 Deploy to Production
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚫 Cancel Workflow Action
+        uses: styfle/cancel-workflow-action@0.12.1
+
+      - name: ⬇️ Check out repository code
+        uses: actions/checkout@v4.1.1
+
+      - name: 🟩 Set up Node
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: "16"
+          cache: "npm"
+
+      - name: 📥 Download dependencies
+        run: npm ci
+
+      - name: ⬇️ Download production build artifact
+        uses: actions/download-artifact@v4.1.4
+
+      - name: 👀 Display structure of build directory
+        run: ls -l
+        working-directory: build
+
+      - name: 👤 Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4.0.2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: 🚢 Deploy (Sync build folder to the production bucket with the AWS CLI)
+        run: |
+          aws s3 sync ./build s3://$AWS_S3_BUCKET_NAME
