@@ -13,7 +13,7 @@ jobs:
     name: 🪄 Lint
     runs-on: ubuntu-latest
     steps:
-      - name: 🚫 Cancel Workflow Action
+      - name: 🚫 Cancel previous workflow runs
         uses: styfle/cancel-workflow-action@0.12.1
 
       - name: ⬇️ Check out repository code
@@ -32,10 +32,10 @@ jobs:
         run: npm run lint
 
   typecheck:
-    name: 🪄 Typecheck
+    name: 🔎 Typecheck
     runs-on: ubuntu-latest
     steps:
-      - name: 🚫 Cancel Workflow Action
+      - name: 🚫 Cancel previous workflow runs
         uses: styfle/cancel-workflow-action@0.12.1
 
       - name: ⬇️ Check out repository code
@@ -58,7 +58,7 @@ jobs:
     needs: [lint, typecheck]
     runs-on: ubuntu-latest
     steps:
-      - name: 🚫 Cancel Workflow Action
+      - name: 🚫 Cancel previous workflow runs
         uses: styfle/cancel-workflow-action@0.12.1
 
       - name: ⬇️ Check out repository code
@@ -87,7 +87,7 @@ jobs:
     needs: [test]
     runs-on: ubuntu-latest
     steps:
-      - name: 🚫 Cancel Workflow Action
+      - name: 🚫 Cancel previous workflow runs
         uses: styfle/cancel-workflow-action@0.12.1
 
       - name: ⬇️ Check out repository code
@@ -116,7 +116,7 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: 🚫 Cancel Workflow Action
+      - name: 🚫 Cancel previous workflow runs
         uses: styfle/cancel-workflow-action@0.12.1
 
       - name: ⬇️ Check out repository code
@@ -136,7 +136,7 @@ jobs:
 
       - name: 👀 Display structure of build directory
         run: ls -l
-        working-directory: build
+        working-directory: ./build
 
       - name: 👤 Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4.0.2
@@ -147,4 +147,4 @@ jobs:
 
       - name: 🚢 Deploy (Sync build folder to the production bucket with the AWS CLI)
         run: |
-          aws s3 sync ./build s3://$AWS_S3_BUCKET_NAME
+          aws s3 sync ./build s3://${{ env.AWS_S3_BUCKET_NAME }}
