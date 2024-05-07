@@ -10,7 +10,7 @@ This is a portfolio website aimed to showcases my software development abilities
 
 # Cloud Architecture
 
-![Architecture](https://github.com/[axelsomerseth]/[portfolio]/blob/[main]/public/axelcordova.site_cloud_architecture.png?raw=true)
+![Architecture](https://github.com/axelsomerseth/portfolio/blob/main/public/axelcordova.site_cloud_architecture.png?raw=true)
 
 # License
 
