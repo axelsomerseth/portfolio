@@ -19,13 +19,13 @@ const Projects: React.FC<{}> = () => {
       title: t("projects.project2.title"),
       details: t("projects.project2.details"),
       screenshot: badgrExtrasScreenshot,
-      link: "https://badgr-extras.netlify.app/",
+      link: "https://chromewebstore.google.com/detail/badgr-extras/bmblmoohmflnobgccibkbdfgfgllgdfa",
     },
     {
       title: t("projects.project3.title"),
       details: t("projects.project3.details"),
       screenshot: resolutionsScreenshot,
-      link: "https://resolutions-app.netlify.app/",
+      link: "https://resolutions-99ef3.web.app/",
     },
   ];
 

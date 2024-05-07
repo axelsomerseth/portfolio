@@ -11,8 +11,13 @@ const Contact: React.FC<{}> = () => {
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const success = await contactMe(name, email, message);
-    console.log("Success: ", success);
+    contactMe(name, email, message)
+      .then(() => {
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => console.error(error));
   };
 
   return (
