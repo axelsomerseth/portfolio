@@ -1,6 +1,6 @@
 # Axel Cordova's Portfolio Website
 
-This is a portfolio website aimed to showcases my software development abilities.
+This is a portfolio website aimed to showcase my software development abilities.
 
 - This project was bootstrapped with [Create React App (TypeScript Template)](https://create-react-app.dev).
 - Illustrations were downloaded from [unDraw](https://undraw.co/search).
