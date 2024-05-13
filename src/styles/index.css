@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 @import "components.css";
 
 @tailwind base;
@@ -5,7 +7,7 @@
 @tailwind utilities;
 
 body {
-  @apply w-full theme;
+  @apply w-full theme font-Inter;
 }
 
 .theme {
