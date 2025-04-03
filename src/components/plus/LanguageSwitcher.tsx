@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Listbox,
   ListboxButton,
@@ -7,27 +7,36 @@ import {
 } from "@headlessui/react";
 import { ChevronUpDownIcon } from "@heroicons/react/16/solid";
 import { CheckIcon } from "@heroicons/react/20/solid";
+import { useTranslation } from "react-i18next";
 
 const languages = [
   {
     id: 1,
     name: "English",
     flag: "🇺🇸",
+    code: "en",
   },
   {
     id: 2,
     name: "Español",
     flag: "🇭🇳",
+    code: "es",
   },
   {
     id: 3,
     name: "Português",
     flag: "🇧🇷",
+    code: "pt",
   },
 ];
 
 export default function LanguageSwitcher() {
+  const { i18n } = useTranslation();
   const [selected, setSelected] = useState(languages[0]);
+
+  useEffect(() => {
+    i18n.changeLanguage(selected.code);
+  }, [i18n, selected]);
 
   return (
     <Listbox value={selected} onChange={setSelected}>

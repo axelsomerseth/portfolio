@@ -1,5 +1,9 @@
 {
   "translation": {
+    "featuredService": {
+      "subHeading": "Seu negócio precisa de um ótimo software",
+      "mainHeading": "Contrate um engenheiro de software com experiência"
+    },
     "navbar": {
       "about": "About",
       "skills": "Habilidades",

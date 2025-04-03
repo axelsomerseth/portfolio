@@ -14,6 +14,9 @@ module.exports = {
           "Noto Color Emoji",
         ],
       },
+      colors: {
+        primary: "#D85505",
+      },
     },
   },
   plugins: [],
