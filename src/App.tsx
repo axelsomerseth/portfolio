@@ -1,16 +1,18 @@
 import React, { createContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import MoreAbout from "./components/MoreAbout";
-import Skills from "./components/Skills";
-import SocialMedia from "./components/SocialMedia";
-import Contact from "./components/Contact";
-import Projects from "./components/Projects";
+import Header from "./components/plus/Header";
+// import Banner from "./components/plus/Banner";
+// import CallToAction from "./components/plus/CallToAction";
+import FeaturedService from "./components/plus/FeaturedService";
+// import CenteredGrid from "./components/plus/CenteredGrid";
+// import BentoGrid from "./components/plus/BentoGrid";
+// import FormSection from "./components/plus/FormSection";
+// import Stats from "./components/plus/Stats";
+// import LogoGrid from "./components/plus/LogoGrid";
+// import Testimonials from "./components/plus/Testimonials";
+// import FromTheBlog from "./components/plus/FromTheBlog";
 import ScrollToTop from "./components/ScrollToTop";
-import Footer from "./components/Footer";
-import Separator from "./components/Separator";
 
 export const LanguageContext = createContext("en");
 
@@ -20,43 +22,45 @@ const App: React.FC<{}> = () => {
 
   return (
     <LanguageContext.Provider value={language}>
-      <Navbar />
-      <main className="w-full flex flex-col items-center lg:pl-16 lg:pr-16 pl-2 pr-2">
-        <Separator />
-        <div className="flex-initial">
-          <Hero />
-        </div>
+      {/* Navbar */}
+      <Header />
 
-        <Separator />
-        <div className="flex-initial">
-          <MoreAbout />
-        </div>
+      {/* Some important information */}
+      {/* <Banner /> */}
 
-        <Separator />
-        <div className="flex-initial lg:w-full">
-          <Skills />
-        </div>
+      {/* About */}
+      <FeaturedService />
 
-        <Separator />
-        <div className="flex-initial">
-          <Projects />
-        </div>
+      {/* See my last recent project (Like POS for example) */}
+      {/* <CallToAction /> */}
 
-        <Separator />
-        <div className="flex-initial">
-          <Contact />
-        </div>
+      {/* Contact form */}
+      {/* <FormSection /> */}
 
-        <Separator />
-        <div className="flex-initial lg:w-5/6">
-          <SocialMedia />
-        </div>
+      {/* Skills section*/}
 
-        <Separator />
-        <div className="flex-initial w-full">
-          <Footer />
-        </div>
-      </main>
+      {/* Uses section*/}
+
+      {/* Projects section */}
+
+      {/* Roles that I have been working in */}
+      {/* <CenteredGrid /> */}
+
+      {/* Examples of developed apps */}
+      {/* <BentoGrid /> */}
+
+      {/* TODO: not defined */}
+      {/* <Stats /> */}
+
+      {/* Work Experiences */}
+      {/* <LogoGrid /> */}
+
+      {/* Contact people for recommendations */}
+      {/* <Testimonials /> */}
+
+      {/* Latest 3 public repositories */}
+      {/* <FromTheBlog /> */}
+
       <ScrollToTop />
     </LanguageContext.Provider>
   );

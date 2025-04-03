@@ -22,10 +22,10 @@
   }
 
   .ThemeSwitcher {
-    @apply px-2 py-2 rounded-md bg-black text-gray-100 dark:bg-white dark:text-gray-900;
+    @apply px-1 py-1 lg:px-2 lg:py-2 rounded-md bg-black text-gray-100 dark:bg-white dark:text-gray-900;
   }
   .Scroll {
-    @apply sticky lg:sticky left-full bottom-0 rounded-lg pr-2 pb-3 lg:pr-3 lg:pb-4;
+    @apply sticky lg:sticky left-full bottom-0 rounded-lg pr-4 pb-3 lg:pr-7 lg:pb-4;
   }
 
   .Hero {
