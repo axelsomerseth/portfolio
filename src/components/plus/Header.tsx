@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon, HomeIcon } from "@heroicons/react/24/outline";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeSwitcher from "../ThemeSwitcher";
+import { NavLink, useLocation } from "react-router";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <header className="bg-white dark:bg-black">
@@ -27,30 +29,58 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-8">
-          <a
-            href="/about"
-            className="text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+          {location.pathname === "/" ? (
+            <HomeIcon
+              aria-hidden="true"
+              className="size-6 text-white dark:text-black"
+            />
+          ) : (
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                (isActive ? "text-primary" : "") +
+                " text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+              }
+            >
+              <HomeIcon aria-hidden="true" className="size-6" />
+            </NavLink>
+          )}
+          <NavLink
+            to={"/about"}
+            className={({ isActive }) =>
+              (isActive ? "text-primary" : "") +
+              " text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+            }
           >
             About
-          </a>
-          <a
-            href="/experience"
-            className="text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+          </NavLink>
+          <NavLink
+            to={"/experience"}
+            className={({ isActive }) =>
+              (isActive ? "text-primary" : "") +
+              " text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+            }
           >
             Experience
-          </a>
-          <a
-            href="/projects"
-            className="text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+          </NavLink>
+          <NavLink
+            to={"/projects"}
+            className={({ isActive }) =>
+              (isActive ? "text-primary" : "") +
+              " text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+            }
           >
             Projects
-          </a>
-          <a
-            href="/uses"
-            className="text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+          </NavLink>
+          <NavLink
+            to={"/uses"}
+            className={({ isActive }) =>
+              (isActive ? "text-primary" : "") +
+              " text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+            }
           >
             Uses
-          </a>
+          </NavLink>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:gap-5 lg:justify-end">
           <LanguageSwitcher />
@@ -77,30 +107,65 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a
-                  href="/about"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-gray-50"
+                {location.pathname === "/" ? (
+                  <></>
+                ) : (
+                  <NavLink
+                    to={"/"}
+                    className={({ isActive }) =>
+                      (isActive
+                        ? "text-primary hover:bg-gray-200"
+                        : "hover:bg-primary") +
+                      " -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold"
+                    }
+                  >
+                    <HomeIcon aria-hidden="true" className="size-6" />
+                  </NavLink>
+                )}
+                <NavLink
+                  to={"/about"}
+                  className={({ isActive }) =>
+                    (isActive
+                      ? "text-primary hover:bg-gray-200"
+                      : "hover:bg-primary") +
+                    " -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold"
+                  }
                 >
                   About
-                </a>
-                <a
-                  href="/experience"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-gray-50"
+                </NavLink>
+                <NavLink
+                  to={"/experience"}
+                  className={({ isActive }) =>
+                    (isActive
+                      ? "text-primary hover:bg-gray-200"
+                      : "hover:bg-primary") +
+                    " -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold"
+                  }
                 >
                   Experience
-                </a>
-                <a
-                  href="/projects"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-gray-50"
+                </NavLink>
+                <NavLink
+                  to={"/projects"}
+                  className={({ isActive }) =>
+                    (isActive
+                      ? "text-primary hover:bg-gray-200"
+                      : "hover:bg-primary") +
+                    " -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold"
+                  }
                 >
                   Projects
-                </a>
-                <a
-                  href="/uses"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-gray-50"
+                </NavLink>
+                <NavLink
+                  to={"/uses"}
+                  className={({ isActive }) =>
+                    (isActive
+                      ? "text-primary hover:bg-gray-200"
+                      : "hover:bg-primary") +
+                    " -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold"
+                  }
                 >
                   Uses
-                </a>
+                </NavLink>
               </div>
               <div className="py-6 flex justify-between">
                 <LanguageSwitcher />

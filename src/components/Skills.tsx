@@ -1,5 +1,5 @@
 import React from "react";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import reactLogo from "./../assets/icons/react-logo.png";
 import nodeLogo from "./../assets/icons/node-logo.png";
 import typescriptLogo from "./../assets/icons/typescript-logo.png";
@@ -9,10 +9,12 @@ import postgresqlLogo from "./../assets/icons/postgresql-logo.png";
 import IconCard from "./IconCard";
 
 const Skills: React.FC<{}> = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="Skills" id="skills">
       <h2 className="section-header">
-        <Trans i18nKey={"skills.header"} />
+        <Trans i18nKey={"skills.header"} t={t} />
       </h2>
 
       <div className="flex lg:flex-row justify-around">

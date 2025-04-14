@@ -1,6 +1,6 @@
 import { LinkIcon } from "@heroicons/react/24/solid";
 import React from "react";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 interface ProjectCardProps {
   className: string;
@@ -17,6 +17,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   screenshot,
   link,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={className + " ProjectCard"}>
       <img
@@ -30,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <a href={link} target="_blank" rel="noreferrer" className="project-link">
         <LinkIcon className="h-5" />
         &nbsp;
-        <Trans i18nKey={"projects.link"} />
+        <Trans i18nKey={"projects.link"} t={t} />
       </a>
     </div>
   );

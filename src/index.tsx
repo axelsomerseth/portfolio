@@ -6,10 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router";
 
 import "./i18n";
+
 import About from "./routes/About";
 import Experience from "./routes/Experience";
 import Projects from "./routes/Projects";
 import Uses from "./routes/Uses";
+import Home from "./routes/Home";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,12 +20,14 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route index element={<App />} />
+        <Route element={<App />}>
+          <Route index path="/" element={<Home />} />
 
-        <Route path="about" element={<About />} />
-        <Route path="experience" element={<Experience />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="uses" element={<Uses />} />
+          <Route path="about" element={<About />} />
+          <Route path="experience" element={<Experience />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="uses" element={<Uses />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

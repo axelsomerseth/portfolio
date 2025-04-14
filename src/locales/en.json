@@ -54,6 +54,9 @@
     },
     "socialMedia": {
       "header": "My Social Media Profiles"
+    },
+    "about": {
+      "title": "About"
     }
   }
 }

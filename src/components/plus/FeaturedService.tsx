@@ -1,3 +1,4 @@
+import React from "react";
 import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
@@ -6,7 +7,7 @@ import {
   CloudIcon,
 } from "@heroicons/react/20/solid";
 import KeyboardImage from "../../assets/images/keychron_k2.png";
-import { Trans } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 const features = [
   {
@@ -41,7 +42,9 @@ const features = [
   },
 ];
 
-export default function FeaturedSection() {
+const FeaturedSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="overflow-hidden theme py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -49,10 +52,10 @@ export default function FeaturedSection() {
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
               <h2 className="text-base/7 font-semibold text-primary">
-                <Trans i18nKey={"featuredService.subHeading"} />
+                <Trans i18nKey={"featuredService.subHeading"} t={t} />
               </h2>
               <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight theme sm:text-5xl">
-                <Trans i18nKey={"featuredService.mainHeading"} />
+                <Trans i18nKey={"featuredService.mainHeading"} t={t} />
               </p>
               <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-400">
                 Hi there! I'm a Full Stack Software Engineer. My main tech stack
@@ -87,4 +90,6 @@ export default function FeaturedSection() {
       </div>
     </div>
   );
-}
+};
+
+export default FeaturedSection;

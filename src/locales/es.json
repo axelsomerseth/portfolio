@@ -51,6 +51,9 @@
     },
     "skills": {
       "header": "Mis Mejores Habilidades"
+    },
+    "about": {
+      "title": "Acerca de"
     }
   }
 }

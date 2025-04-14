@@ -23,7 +23,7 @@ const Contact: React.FC<{}> = () => {
   return (
     <section className="Contact" id="contact">
       <h2 className="section-header">
-        <Trans i18nKey={"contact.title"} />
+        <Trans i18nKey={"contact.title"} t={t} />
       </h2>
 
       <div className="flex flex-col">
@@ -32,7 +32,7 @@ const Contact: React.FC<{}> = () => {
             <div className="flex flex-row items-center">
               <div className="flex-initial w-1/6">
                 <label htmlFor="name">
-                  <Trans i18nKey={"contact.name"} />
+                  <Trans i18nKey={"contact.name"} t={t} />
                   {": "}
                 </label>
               </div>
@@ -54,7 +54,7 @@ const Contact: React.FC<{}> = () => {
             <div className="flex flex-row items-center">
               <div className="flex-initial w-1/6">
                 <label htmlFor="email">
-                  <Trans i18nKey={"contact.email"} />
+                  <Trans i18nKey={"contact.email"} t={t} />
                   {": "}
                 </label>
               </div>
@@ -76,7 +76,7 @@ const Contact: React.FC<{}> = () => {
             <div className="flex flex-col">
               <div className="flex-initial">
                 <label htmlFor="message">
-                  <Trans i18nKey={"contact.message"} />
+                  <Trans i18nKey={"contact.message"} t={t} />
                   {": "}
                 </label>
               </div>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Listbox,
   ListboxButton,
@@ -9,7 +9,14 @@ import { ChevronUpDownIcon } from "@heroicons/react/16/solid";
 import { CheckIcon } from "@heroicons/react/20/solid";
 import { useTranslation } from "react-i18next";
 
-const languages = [
+interface LanguageMap {
+  id: number;
+  name: string;
+  flag: string;
+  code: string;
+}
+
+const languages: LanguageMap[] = [
   {
     id: 1,
     name: "English",
@@ -30,16 +37,20 @@ const languages = [
   },
 ];
 
-export default function LanguageSwitcher() {
+const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation();
-  const [selected, setSelected] = useState(languages[0]);
+  const [selected, setSelected] = useState<LanguageMap>(languages[0]);
 
-  useEffect(() => {
-    i18n.changeLanguage(selected.code);
-  }, [i18n, selected]);
+  const onLanguageChange = async (value: LanguageMap) => {
+    setSelected(value);
+    await i18n.changeLanguage(value.code);
+  };
 
   return (
-    <Listbox value={selected} onChange={setSelected}>
+    <Listbox
+      value={selected}
+      onChange={(value: LanguageMap) => onLanguageChange(value)}
+    >
       <div className="relative min-w-40">
         <ListboxButton className="grid w-full cursor-default grid-cols-1 rounded-md py-1.5 pl-3 pr-2 text-left theme outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
           <span className="col-start-1 row-start-1 flex items-center gap-3 pr-6">
@@ -82,4 +93,6 @@ export default function LanguageSwitcher() {
       </div>
     </Listbox>
   );
-}
+};
+
+export default LanguageSwitcher;

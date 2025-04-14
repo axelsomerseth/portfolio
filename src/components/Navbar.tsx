@@ -1,11 +1,13 @@
 import React from "react";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 interface Props {}
 
 const Navbar: React.FC<Props> = () => {
+  const { t } = useTranslation();
+
   return (
     <nav className="flex flex-col lg:flex-row items-center Navbar">
       <h1 className="flex-initial text-3xl font-bold lg:pl-5">Axel Cordova</h1>
@@ -15,22 +17,22 @@ const Navbar: React.FC<Props> = () => {
             <ul className="flex flex-row lg:flex-row justify-around items-center">
               <li>
                 <a href="#about" className="NavLink">
-                  <Trans i18nKey={"navbar.about"} />
+                  <Trans i18nKey={"navbar.about"} t={t} />
                 </a>
               </li>
               <li>
                 <a href="#skills" className="NavLink">
-                  <Trans i18nKey={"navbar.skills"} />
+                  <Trans i18nKey={"navbar.skills"} t={t} />
                 </a>
               </li>
               <li>
                 <a href="#projects" className="NavLink">
-                  <Trans i18nKey={"navbar.projects"} />
+                  <Trans i18nKey={"navbar.projects"} t={t} />
                 </a>
               </li>
               <li>
                 <a href="#contact" className="NavLink">
-                  <Trans i18nKey={"navbar.contact"} />
+                  <Trans i18nKey={"navbar.contact"} t={t} />
                 </a>
               </li>
             </ul>
