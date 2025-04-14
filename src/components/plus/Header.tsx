@@ -27,16 +27,28 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-8">
-          <a href="/about" className="text-sm/6 font-semibold">
+          <a
+            href="/about"
+            className="text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+          >
             About
           </a>
-          <a href="/experience" className="text-sm/6 font-semibold">
+          <a
+            href="/experience"
+            className="text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+          >
             Experience
           </a>
-          <a href="/projects" className="text-sm/6 font-semibold">
+          <a
+            href="/projects"
+            className="text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+          >
             Projects
           </a>
-          <a href="/uses" className="text-sm/6 font-semibold">
+          <a
+            href="/uses"
+            className="text-sm/6 font-semibold transition hover:text-primary dark:hover:text-primary"
+          >
             Uses
           </a>
         </PopoverGroup>

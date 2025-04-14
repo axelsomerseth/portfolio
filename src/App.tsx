@@ -12,6 +12,7 @@ import FeaturedService from "./components/plus/FeaturedService";
 // import LogoGrid from "./components/plus/LogoGrid";
 // import Testimonials from "./components/plus/Testimonials";
 // import FromTheBlog from "./components/plus/FromTheBlog";
+import PhotoGrid from "./components/plus/PhotoGrid";
 import ScrollToTop from "./components/ScrollToTop";
 
 export const LanguageContext = createContext("en");
@@ -30,6 +31,9 @@ const App: React.FC<{}> = () => {
 
       {/* About */}
       <FeaturedService />
+
+      {/* PhotoGrid */}
+      <PhotoGrid />
 
       {/* See my last recent project (Like POS for example) */}
       {/* <CallToAction /> */}
