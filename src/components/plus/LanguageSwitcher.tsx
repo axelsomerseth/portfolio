@@ -52,7 +52,7 @@ const LanguageSwitcher: React.FC = () => {
       onChange={(value: LanguageMap) => onLanguageChange(value)}
     >
       <div className="relative min-w-40">
-        <ListboxButton className="grid w-full cursor-default grid-cols-1 rounded-md py-1.5 pl-3 pr-2 text-left theme outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+        <ListboxButton className="grid w-full cursor-default grid-cols-1 rounded-md py-1.5 pl-3 pr-2 text-left theme outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary sm:text-sm/6">
           <span className="col-start-1 row-start-1 flex items-center gap-3 pr-6">
             <span className="size-5 shrink-0 rounded-full">
               {selected.flag}
@@ -73,7 +73,7 @@ const LanguageSwitcher: React.FC = () => {
             <ListboxOption
               key={lang.id}
               value={lang}
-              className="group relative cursor-default select-none py-2 pl-3 pr-9 data-[focus]:bg-indigo-600 data-[focus]:text-white data-[focus]:outline-none"
+              className="group relative cursor-default select-none py-2 pl-3 pr-9 data-[focus]:bg-primary data-[focus]:text-white data-[focus]:outline-none"
             >
               <div className="flex items-center">
                 <span className="size-5 shrink-0 rounded-full">
@@ -84,7 +84,7 @@ const LanguageSwitcher: React.FC = () => {
                 </span>
               </div>
 
-              <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-[&:not([data-selected])]:hidden group-data-[focus]:text-white">
+              <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-primary group-[&:not([data-selected])]:hidden group-data-[focus]:text-white">
                 <CheckIcon aria-hidden="true" className="size-7" />
               </span>
             </ListboxOption>

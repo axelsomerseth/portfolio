@@ -1,16 +1,16 @@
 import React from "react";
 
 // import Header from "../components/plus/Header";
-// import Banner from "./components/plus/Banner";
-// import CallToAction from "./components/plus/CallToAction";
+// import Banner from "../components/plus/Banner";
+// import CallToAction from "../components/plus/CallToAction";
 import FeaturedService from "../components/plus/FeaturedService";
-// import CenteredGrid from "./components/plus/CenteredGrid";
-// import BentoGrid from "./components/plus/BentoGrid";
-// import FormSection from "./components/plus/FormSection";
-// import Stats from "./components/plus/Stats";
-// import LogoGrid from "./components/plus/LogoGrid";
-// import Testimonials from "./components/plus/Testimonials";
-// import FromTheBlog from "./components/plus/FromTheBlog";
+// import CenteredGrid from "../components/plus/CenteredGrid";
+// import BentoGrid from "../components/plus/BentoGrid";
+import FormSection from "../components/plus/FormSection";
+// import Stats from "../components/plus/Stats";
+// import LogoGrid from "../components/plus/LogoGrid";
+// import Testimonials from "../components/plus/Testimonials";
+// import FromTheBlog from "../components/plus/FromTheBlog";
 import PhotoGrid from "../components/plus/PhotoGrid";
 // import ScrollToTop from "../components/ScrollToTop";
 
@@ -30,7 +30,7 @@ const Home: React.FC<{}> = () => {
       {/* <CallToAction /> */}
 
       {/* Contact form */}
-      {/* <FormSection /> */}
+      <FormSection />
 
       {/* Skills section*/}
 

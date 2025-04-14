@@ -4,6 +4,16 @@
       "subHeading": "Seu negócio precisa de um ótimo software",
       "mainHeading": "Contrate um engenheiro de software com experiência"
     },
+    "contact": {
+      "title": "Entre em contato comigo",
+      "name": "Nome",
+      "namePlaceholder": "Escreva seu nome",
+      "email": "Email",
+      "emailPlaceholder": "Escreva seu email",
+      "message": "Mensagem",
+      "messagePlaceholder": "Escreva sua mensagem",
+      "submit": "Vamos conversar"
+    },
     "navbar": {
       "about": "About",
       "skills": "Habilidades",
