@@ -54,9 +54,9 @@ const FeaturedSection: React.FC = () => {
               <h2 className="text-base/7 font-semibold text-primary">
                 <Trans i18nKey={"featuredService.subHeading"} t={t} />
               </h2>
-              <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight theme sm:text-5xl">
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight theme sm:text-5xl">
                 <Trans i18nKey={"featuredService.mainHeading"} t={t} />
-              </p>
+              </h1>
               <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-400">
                 Hi there! I'm a Full Stack Software Engineer. My main tech stack
                 is React.js + Node.js + TypeScript. I have +6 years of
