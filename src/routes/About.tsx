@@ -8,7 +8,7 @@ const About: React.FC<{}> = () => {
   return (
     <>
       <Banner />
-      <h1 className="w-full h-full flex justify-center items-center">
+      <h1 className="w-full h-svh flex justify-center items-center">
         <Trans i18nKey={"about.title"} t={t} />
       </h1>
     </>
