@@ -1,7 +1,6 @@
 import React from "react";
 
-// import Header from "../components/plus/Header";
-// import Banner from "../components/plus/Banner";
+import Banner from "../components/plus/Banner";
 // import CallToAction from "../components/plus/CallToAction";
 import FeaturedService from "../components/plus/FeaturedService";
 // import CenteredGrid from "../components/plus/CenteredGrid";
@@ -18,7 +17,7 @@ const Home: React.FC<{}> = () => {
   return (
     <>
       {/* Some important information */}
-      {/* <Banner /> */}
+      <Banner />
 
       {/* About */}
       <FeaturedService />

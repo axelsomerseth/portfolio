@@ -1,9 +1,13 @@
 import React from "react";
+import Banner from "../components/plus/Banner";
 
 const Projects: React.FC<{}> = () => {
   return (
     <>
-      <h1>Projects</h1>
+      <Banner />
+      <h1 className="w-full h-full flex justify-center items-center">
+        Projects
+      </h1>
     </>
   );
 };

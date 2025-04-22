@@ -1,12 +1,14 @@
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
+import Banner from "../components/plus/Banner";
 
 const About: React.FC<{}> = () => {
   const { t } = useTranslation();
 
   return (
     <>
-      <h1>
+      <Banner />
+      <h1 className="w-full h-full flex justify-center items-center">
         <Trans i18nKey={"about.title"} t={t} />
       </h1>
     </>
