@@ -13,31 +13,31 @@ const features = [
   {
     name: "Front-end Development",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Experienced in design and implementation of beautiful and interactive components with React and TailwindCSS and -you guessed- other tools.",
     icon: CodeBracketIcon,
   },
   {
     name: "Mobile Development",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Capable of building mobile Apps with React Native and Expo Framework.",
     icon: DevicePhoneMobileIcon,
   },
   {
     name: "Back-end Development",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Skilled in back-end development with Golang, but highly experienced in Node.js + web frameworks like Express.js, Nest.js, Remix and Fastify.",
     icon: ServerIcon,
   },
   {
-    name: "Database development",
+    name: "Databases",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Competent in SQL Databases like Postgres and NoSQL Databases like MongoDB and Firestore.",
     icon: CircleStackIcon,
   },
   {
     name: "Cloud Computing",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Trained in configuring cloud services in platforms like Amazon Web Services or Google Cloud Platform. I also configured CI/CD Pipelines by the way.",
     icon: CloudIcon,
   },
 ];
@@ -59,9 +59,10 @@ const FeaturedSection: React.FC = () => {
               </h1>
               <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-400">
                 Hi there! I'm a Full Stack Software Engineer. My main tech stack
-                is React.js + Node.js + TypeScript. I have +6 years of
+                is React.js + Node.js + TypeScript. I have +7 years of
                 experience. I love solving problems and satisfying needs through
-                software development.
+                software development. Latests technologies will be always
+                important to our civilization.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
