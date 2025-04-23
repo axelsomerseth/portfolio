@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../components/plus/Banner";
-import BentoGrid from "../components/plus/BentoGrid";
-import CallToAction from "../components/plus/CallToAction";
+// import BentoGrid from "../components/plus/BentoGrid";
+// import CallToAction from "../components/plus/CallToAction";
 
 const Projects: React.FC<{}> = () => {
   return (
@@ -13,10 +13,10 @@ const Projects: React.FC<{}> = () => {
       </h1>
 
       {/* Examples of developed apps */}
-      <BentoGrid />
+      {/* <BentoGrid /> */}
 
       {/* See my last recent project (Like POS for example) */}
-      <CallToAction />
+      {/* <CallToAction /> */}
     </>
   );
 };
