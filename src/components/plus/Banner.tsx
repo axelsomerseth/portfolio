@@ -38,7 +38,7 @@ const Banner: React.FC = () => {
         />
       </div>
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <p className="text-sm/6 text-gray-900 dark:text-gray-50">
+        <p className="text-sm/6 text-center text-gray-900 dark:text-gray-50">
           <strong className="font-semibold">Sorry!</strong>
           <svg
             viewBox="0 0 2 2"

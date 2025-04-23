@@ -186,7 +186,7 @@ const FormSection: React.FC = () => {
               </div>
             </form>
           </div>
-          <div className="absolute left-0 top-0 -z-20">
+          <div className="absolute left-0 top-0 -z-20 w-full">
             <div className="relative transform-gpu overflow-hidden blur-3xl ">
               <div
                 style={{
