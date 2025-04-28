@@ -5,6 +5,7 @@ import FeaturedService from "../components/plus/FeaturedService";
 import FormSection from "../components/plus/FormSection";
 import PhotoGrid from "../components/plus/PhotoGrid";
 import Stats from "../components/plus/Stats";
+import SocialMediaLinks from "../components/plus/SocialMediaLinks";
 // import FromTheBlog from "../components/plus/FromTheBlog";
 
 const Home: React.FC<{}> = () => {
@@ -22,6 +23,8 @@ const Home: React.FC<{}> = () => {
       <FormSection />
 
       <Stats />
+
+      <SocialMediaLinks />
 
       {/* Skills section*/}
 

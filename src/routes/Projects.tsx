@@ -12,10 +12,10 @@ const Projects: React.FC<{}> = () => {
         Projects that I have worked on
       </h1>
 
-      {/* Examples of developed apps */}
+      {/* TODO: Examples of developed apps */}
       {/* <BentoGrid /> */}
 
-      {/* See my last recent project (Like POS for example) */}
+      {/* TODO: See my last recent project (Like POS for example) */}
       {/* <CallToAction /> */}
     </>
   );

@@ -58,11 +58,12 @@ const FeaturedSection: React.FC = () => {
                 <Trans i18nKey={"featuredService.mainHeading"} t={t} />
               </h1>
               <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-400">
-                Hi there! I'm a Full Stack Software Engineer. My main tech stack
-                is React.js + Node.js + TypeScript. I have +7 years of
-                experience. I love solving problems and satisfying needs through
-                software development. Latests technologies will be always
-                important to our civilization.
+                Hi there! My name is <strong>Axel Cordova</strong>! I'm a Full
+                Stack Software Engineer. My main tech stack is React.js +
+                Node.js + TypeScript. I have +7 years of experience. I love
+                solving problems and satisfying needs through software
+                development. Latests technologies will be always important to
+                our civilization.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (

@@ -2,9 +2,10 @@ const Education: React.FC = () => {
   return (
     <>
       <h1>Education</h1>
-      {/* My Ingeniero en Sistemas title */}
 
-      {/* My Certifications */}
+      {/* TODO: Upload My Ingeniero en Sistemas title */}
+
+      {/* TODO: Upload my certifications */}
 
       {/* Other Relevant info */}
     </>

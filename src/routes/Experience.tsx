@@ -10,7 +10,7 @@ const Experience: React.FC<{}> = () => {
       <Banner />
       {/* <h1 className="w-full flex justify-center items-center">Experience</h1> */}
 
-      {/* Roles that I have been working in */}
+      {/* Companies that I have been working in */}
       <LogoGrid />
 
       {/* Roles that I have been working in */}
