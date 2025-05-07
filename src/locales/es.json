@@ -53,7 +53,9 @@
       "header": "Mis Mejores Habilidades"
     },
     "about": {
-      "title": "Acerca de"
+      "title": "Acerca de",
+      "funnyButton": "Dame click si puedes",
+      "funnyAlert": "¡Si pudiste! 😂"
     }
   }
 }

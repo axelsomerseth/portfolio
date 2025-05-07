@@ -56,7 +56,9 @@
       "header": "My Social Media Profiles"
     },
     "about": {
-      "title": "About"
+      "title": "About",
+      "funnyButton": "Click me if you can",
+      "funnyAlert": "You clicked me! 😂"
     }
   }
 }

@@ -24,7 +24,9 @@
       "bioText": "Engenheiro de Sistemas Full-Stack | React.js + Node.js + TypeScript | +5 anos de experiência"
     },
     "about": {
-      "title": "Sobre"
+      "title": "Sobre",
+      "funnyButton": "Clique me se pode",
+      "funnyAlert": "Sim, era possível 😂"
     }
   }
 }
